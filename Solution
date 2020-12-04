@@ -11,11 +11,17 @@ int main() {
 
    // Remove first character from userName
    userName = userName.substr(1, userName.length() - 1);
-
+   
+    //Access the first index
    char start = secondVerse.find('(');
+   
+   //Access the last index
    char end = secondVerse.find(')');
+   
+   // Find the length of that space
    int length = (end - start)+1;
    
+   //Replace the space with the username
    secondVerse.replace(start,length, userName);
    
 
