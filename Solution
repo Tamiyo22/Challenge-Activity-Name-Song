@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+   string secondVerse;
+   string userName;
+
+   secondVerse = "Banana-fana fo-f(Name)!";
+   userName = "Katie";
+
+   // Remove first character from userName
+   userName = userName.substr(1, userName.length() - 1);
+
+   char start = secondVerse.find('(');
+   char end = secondVerse.find(')');
+   int length = (end - start)+1;
+   
+   secondVerse.replace(start,length, userName);
+   
+
+   cout << secondVerse << endl;
+
+   return 0;
+}
